@@ -1,0 +1,46 @@
+
+
+const products=  [
+    {
+      productName: "Mobile",
+      id: "mb01"
+    },
+    {
+      productName: "Watch",
+      id: "wh01"
+    },
+    {
+      productName: "Laptop",
+      id: "lp01"
+    }
+  ]
+  
+  const updateProduct = (id ,newName )=> {
+   return products?.map((product)=>{
+     if(product.id === id){
+     
+        product=  {...product, productName : newName}   
+     }
+     return product
+    })
+  }
+    console.log(updateProduct("wh01", "vikas",))
+
+  // Petrol Price = 108,
+  // Average = 40kmpl
+  // Rupees = 600 
+  // Output Distance = > 7km
+ 
+  // const distance = 0
+
+
+  const findDistance =(petrolPrice,averageINkmph,rupees)=>{
+      const result =  Math.floor((rupees * averageINkmph) / petrolPrice)
+    return result
+}
+
+console.log(findDistance(108,40,600), "dist")
+
+
+
+
